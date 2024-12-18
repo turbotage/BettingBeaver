@@ -1,0 +1,23 @@
+{
+  "name": "bettingbeaver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turbotage/BettingBeaver.git"
+  },
+  "author": "Viktor Vigren Näslund & Daniel Dahlgren Lindström",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turbotage/BettingBeaver/issues"
+  },
+  "homepage": "https://github.com/turbotage/BettingBeaver#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,39 @@
+<html>
+
+<head>
+
+<script language="JavaScript">
+    debugger;
+
+    var ws = new WebSocket((window.location.protocol == 'https:' ? 'wss://' : 'ws://')
+    + window.location.host);
+
+    ws.onopen = function () {
+        message = {
+            name: "random"
+        };
+
+        ws.send(JSON.stringify(message));
+    };
+
+    ws.onmessage = function (message) {
+        console.log("message received: " + message.data);
+        document.getElementById('messageFromServer').innerHTML = message.data;
+    };
+
+</script>
+
+</head>
+
+<h3>node.js Express static content plus REST endpoints</h3>
+
+<p>This is a static HTML page served from Express using the static middleware. This is</p>
+
+<p>Additionally, it is using Express to implement REST endpoints:</p>
+<ul>
+    <li><a href="status">GET /status</a></li>
+</ul>
+
+<button onclick="websocketConnect()">Connect to server via websocket</button>
+
+</html>
